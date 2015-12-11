@@ -18,7 +18,7 @@ install:
  # metlog-py doesn't support Python 3
  - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then pip install -r optional.txt --use-mirrors; fi
 
- - pip install "Django<${DJANGO}" --use-mirrors
+ - pip install "Django<${DJANGO}"
 script: DJANGO_SETTINGS_MODULE='django_statsd.test_settings' nosetests
 notifications:
   irc: "irc.mozilla.org#amo-bots"
